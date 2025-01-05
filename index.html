@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="shortcut icon" href="image.png" type="image/x-icon" />
+    <title>Emmatiko | Banking App (DevMode)</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="bank_title">Emmatiko | Banking App (DevMode)</h1>
+    </header>
+    <main class="container">
+      <section id="balance_info" class="section">
+        <h2>Please enter your starting balances:</h2>
+        <form id="balance_form">
+          <div class="form-group">
+            <label for="checking_balance">Checking Balance:</label>
+            <input
+              type="number"
+              id="checking_balance"
+              class="enter_balance"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="savings_balance">Savings Balance:</label>
+            <input
+              type="number"
+              id="savings_balance"
+              class="enter_balance"
+              required
+            />
+          </div>
+          <button type="button" id="submit_balance">Submit</button>
+        </form>
+      </section>
+
+      <section class="bank" id="checking_info" style="display: none">
+        <h2>Checking Account</h2>
+        <p id="current_checking_balance">Current Balance: Tsh0.00</p>
+        <div id="enter_transaction">
+          <form id="transaction_form">
+            <div class="form-group">
+              <label for="transaction_amount">Amount:</label>
+              <input
+                type="number"
+                id="transaction_amount"
+                class="transaction"
+                placeholder="0"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="transaction_type">Transaction Type:</label>
+              <select id="transaction_type" class="trans_type" required>
+                <option value="Transfer">Transfer</option>
+                <option value="Debit">Debit</option>
+                <option value="Deposit">Deposit</option>
+                <option value="Withdraw">Withdraw</option>
+              </select>
+            </div>
+            <div class="form-group" id="desc">
+              <label for="transaction_description">Description:</label>
+              <input type="text" id="transaction_description" />
+            </div>
+            <button type="button" id="submit_transaction">Submit</button>
+          </form>
+          <h3>Transaction Logs</h3>
+          <table id="trans_table">
+            <thead>
+              <tr>
+                <th>Transaction Type</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Balance</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+<section class="bank" id="savings_info" style="display: none">
+  <h2>Savings Account</h2>
+  <p id="current_savings_balance">Current Balance: Tsh0.00</p>
+  <div id="enter_transaction_savings">
+    <form id="transaction_form_savings">
+      <div class="form-group">
+        <label for="transaction_amount_savings">Amount:</label>
+        <input
+          type="number"
+          id="transaction_amount_savings"
+          class="transaction"
+          placeholder="0"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="transaction_type_savings">Transaction Type:</label>
+        <select id="transaction_type_savings" class="trans_type" required>
+          <option value="Transfer">Transfer</option>
+          <option value="Deposit">Deposit</option>
+          <option value="Withdraw">Withdraw</option>
+        </select>
+      </div>
+      <div class="form-group" id="desc_savings">
+        <label for="transaction_description_savings">Description:</label>
+        <input type="text" id="transaction_description_savings" />
+      </div>
+      <button type="button" id="submit_transaction_savings">Submit</button>
+    </form>
+    <h3>Transaction Logs</h3>
+    <table id="trans_table_savings">
+      <thead>
+        <tr>
+          <th>Transaction Type</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+    </main>
+    <script src="BankingApp.js"></script>
+  </body>
+</html>
