@@ -16,7 +16,7 @@
 
 1. **Clone the Repository**:  
    ```bash  
-   git clone https://github.com/Emmatiko101/minimal-banking-app.git  
+   git clone https://github.com/emma7iko/minimal-banking-app.git  
    ```  
 
 2. **Navigate to the Project Directory**:  
